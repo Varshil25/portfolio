@@ -46,6 +46,21 @@ export const experience = [
     ],
     stack: ['Java', 'Quarkus', 'React', 'TypeScript', 'JavaScript', 'HTML', 'CSS', 'Azure', 'Jira', 'Debugging'],
   },
+  {
+    role: 'Software Developer (Student Worker)',
+    company: 'Fox School of Business, Temple University (part-time)',
+    years: 'Sep 2025 – Present',
+    points: [
+      'Build a classroom and space management tool for the Fox School of Business. The prototype lets staff browse buildings and rooms, filter them by campus and sort them.',
+      'Provide AV tech support for classrooms.',
+      'Respond to help requests from classrooms, troubleshoot the systems and fix the issues.',
+    ],
+    stack: ['HTML', 'CSS', 'JavaScript', 'AV Support', 'Hardware Troubleshooting'],
+    links: {
+      live: 'https://varshil25.github.io/cts-prototype/',
+      code: 'https://github.com/Varshil25/cts-prototype',
+    },
+  },
 ]
 
 export const research = [

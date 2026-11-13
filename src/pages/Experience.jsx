@@ -20,6 +20,12 @@ export default function Experience() {
                   {job.stack.map((tech) => <li key={tech}>{tech}</li>)}
                 </ul>
               )}
+              {(job.links?.live || job.links?.code) && (
+                <p className="project-links">
+                  {job.links.live && <a className="button" href={job.links.live} target="_blank" rel="noreferrer">Open live prototype</a>}
+                  {job.links.code && <a className="button button--ghost" href={job.links.code} target="_blank" rel="noreferrer">View code</a>}
+                </p>
+              )}
             </div>
           </li>
         ))}
