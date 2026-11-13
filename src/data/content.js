@@ -44,7 +44,7 @@ export const experience = [
       'Placed 8th out of 98 interns in the intern hackathon.',
       'Met with more than 60 Cencora colleagues during the 10-week program to learn about their roles and responsibilities.',
     ],
-    stack: ['Azure', 'Jira'], // TODO: add the languages and frameworks used
+    stack: ['Java', 'Quarkus', 'React', 'TypeScript', 'JavaScript', 'HTML', 'CSS', 'Azure', 'Jira', 'Debugging'],
   },
 ]
 
