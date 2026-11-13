@@ -1,5 +1,6 @@
 import PageHeader from '../components/PageHeader.jsx'
 import { site } from '../data/site.js'
+import { asset } from '../data/asset.js'
 
 export default function Resume() {
   return (
@@ -8,8 +9,8 @@ export default function Resume() {
       <div className="container">
         {site.resume ? (
           <>
-            <a className="button" href={site.resume} download>Download PDF</a>
-            <iframe className="resume-frame" src={site.resume} title="Resume" />
+            <a className="button" href={asset(site.resume)} download>Download PDF</a>
+            <iframe className="resume-frame" src={asset(site.resume)} title="Resume" />
           </>
         ) : (
           <div className="empty">

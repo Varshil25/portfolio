@@ -1,5 +1,6 @@
 import PageHeader from '../components/PageHeader.jsx'
 import { projects } from '../data/projects.js'
+import { asset } from '../data/asset.js'
 
 function Project({ project }) {
   const { title, image, unique, stack, links } = project
@@ -9,7 +10,7 @@ function Project({ project }) {
       <div className="project-grid">
         <div className="project-media">
           {image ? (
-            <img src={image} alt={`${title} preview`} loading="lazy" />
+            <img src={asset(image)} alt={`${title} preview`} loading="lazy" />
           ) : (
             <div className="project-blank" aria-hidden="true">
               <span>{title.charAt(0)}</span>
