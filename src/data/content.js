@@ -24,8 +24,9 @@ export const experience = [
     company: 'Cencora / APR Inc.',
     years: 'Present', // TODO: add the start month, e.g. 'May 2026 – Present'
     points: [
+      'Led my team\'s move to spec-driven development (SDD), which made project delivery about 60% faster and cut bugs by nearly 80%.',
+      'Designed the SDD flow so AI coding agents start with the project\'s context and goals, and test cases are written before any feature is implemented.',
       'Build full-stack features for a healthcare application, with Java and Quarkus services on the backend and React with TypeScript on the frontend.',
-      'Set up a spec-driven development (SDD) workflow for the current application, so features are specified before they are built.',
       'Work within HIPAA compliance requirements for healthcare systems and data.',
       'Deliver in Scrum sprints, tracking work in Jira and keeping documentation in Confluence.',
     ],
