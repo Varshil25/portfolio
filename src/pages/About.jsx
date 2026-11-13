@@ -43,7 +43,7 @@ export default function About() {
                 <p className="row-sub">{item.school}</p>
                 {item.note && <p className="row-note">{item.note}</p>}
               </div>
-              <span className="row-meta">{item.years}</span>
+              {item.years && <span className="row-meta">{item.years}</span>}
             </li>
           ))}
         </ul>

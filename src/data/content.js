@@ -4,8 +4,18 @@ export const goal =
   'Write two or three sentences here about what you want to build, the problems you want to work on, and where you are heading.'
 
 export const education = [
-  { degree: 'Your degree, your field', school: 'University name', years: 'Year – Year', note: 'Coursework, grade or focus area.' },
-  { degree: 'Earlier qualification', school: 'School name', years: 'Year – Year', note: '' },
+  {
+    degree: 'MS in Computer Science',
+    school: 'Temple University',
+    years: 'Aug 2025 – Present',
+    note: 'CGPA 3.78 / 4.00',
+  },
+  {
+    degree: "Bachelor of Engineering in Information Technology",
+    school: 'Saffrony Institute of Technology (GTU)',
+    years: '', // TODO: add start and end years
+    note: 'CGPA 3.74 / 4.00',
+  },
 ]
 
 export const experience = [
