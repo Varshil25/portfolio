@@ -13,23 +13,23 @@ export const education = [
   {
     degree: "Bachelor of Engineering in Information Technology",
     school: 'Saffrony Institute of Technology (GTU)',
-    years: '', // TODO: add start and end years
+    years: 'Sep 2020 – May 2024',
     note: 'CGPA 3.74 / 4.00',
   },
 ]
 
 export const experience = [
   {
-    role: 'Role title',
-    company: 'Company name',
-    years: 'Year – Present',
-    points: ['What you built or owned.', 'The result it had, with a number if you have one.'],
-  },
-  {
-    role: 'Earlier role',
-    company: 'Company name',
-    years: 'Year – Year',
-    points: ['What you built or owned.', 'The result it had.'],
+    role: 'Application Developer Intern',
+    company: 'Cencora / APR Inc.',
+    years: 'Present', // TODO: add the start month, e.g. 'May 2026 – Present'
+    points: [
+      'Build full-stack features for a healthcare application, with Java and Quarkus services on the backend and React with TypeScript on the frontend.',
+      'Set up a spec-driven development (SDD) workflow for the current application, so features are specified before they are built.',
+      'Work within HIPAA compliance requirements for healthcare systems and data.',
+      'Deliver in Scrum sprints, tracking work in Jira and keeping documentation in Confluence.',
+    ],
+    stack: ['Java', 'Quarkus', 'React', 'TypeScript', 'JavaScript', 'HTML', 'CSS'],
   },
 ]
 

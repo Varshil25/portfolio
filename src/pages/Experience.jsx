@@ -15,6 +15,11 @@ export default function Experience() {
               <ul className="timeline-points">
                 {job.points.map((point) => <li key={point}>{point}</li>)}
               </ul>
+              {job.stack?.length > 0 && (
+                <ul className="tags timeline-stack">
+                  {job.stack.map((tech) => <li key={tech}>{tech}</li>)}
+                </ul>
+              )}
             </div>
           </li>
         ))}
