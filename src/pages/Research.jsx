@@ -1,5 +1,6 @@
 import PageHeader from '../components/PageHeader.jsx'
 import { research, achievements } from '../data/content.js'
+import { asset } from '../data/asset.js'
 
 export default function Research() {
   return (
@@ -31,6 +32,11 @@ export default function Research() {
               <div>
                 <h3 className="row-title">{item.title}</h3>
                 <p className="row-sub">{item.detail}</p>
+                {item.certificate && (
+                  <p className="row-note">
+                    <a href={asset(item.certificate)} target="_blank" rel="noreferrer">View certificate</a>
+                  </p>
+                )}
               </div>
               <span className="row-meta">{item.year}</span>
             </li>

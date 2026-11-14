@@ -100,12 +100,24 @@ export const experience = [
 ]
 
 export const research = [
-  { title: 'Title of your paper or research project', venue: 'Journal, conference or lab', year: 'Year', link: '' },
-  { title: 'Title of a second paper or project', venue: 'Journal, conference or lab', year: 'Year', link: '' },
+  {
+    title: 'Spec-driven development (SDD)',
+    venue: 'Ongoing research into how written specs, project context and test-first workflows make AI-assisted software development faster and less error-prone.',
+    year: 'Ongoing',
+    link: '',
+  },
 ]
 
 export const achievements = [
-  { title: 'Award or recognition', detail: 'Who gave it and what for.', year: 'Year' },
-  { title: 'Certification or competition result', detail: 'Issuer or event.', year: 'Year' },
-  { title: 'Another achievement', detail: 'One line of context.', year: 'Year' },
+  {
+    title: 'NSF I-Corps award, $1,500',
+    detail: 'Completed customer discovery interviews for my startup, Sono Assist (Team 146), in the NSF I-Corps Hub Northeast Region program run through Temple University\'s Propelus Program.',
+    year: 'Spring 2026',
+    certificate: '/images/nsf-icorps-certificate.png',
+  },
+  {
+    title: '8th place out of 98 interns, Cencora intern hackathon',
+    detail: 'During my summer software developer internship at Cencora.',
+    year: 'Summer 2026',
+  },
 ]
