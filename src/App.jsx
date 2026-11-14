@@ -3,6 +3,7 @@ import Header from './components/Header.jsx'
 import Footer from './components/Footer.jsx'
 import About from './pages/About.jsx'
 import Projects from './pages/Projects.jsx'
+import ProjectDetail from './pages/ProjectDetail.jsx'
 import Experience from './pages/Experience.jsx'
 import Research from './pages/Research.jsx'
 import Resume from './pages/Resume.jsx'
@@ -16,6 +17,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<About />} />
           <Route path="/projects" element={<Projects />} />
+          <Route path="/projects/:slug" element={<ProjectDetail />} />
           <Route path="/experience" element={<Experience />} />
           <Route path="/research" element={<Research />} />
           <Route path="/resume" element={<Resume />} />

@@ -1,108 +1,67 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import PageHeader from '../components/PageHeader.jsx'
+import ProjectMedia from '../components/ProjectMedia.jsx'
 import { projects } from '../data/projects.js'
-import { asset } from '../data/asset.js'
 
-function Media({ title, image }) {
-  const [failed, setFailed] = useState(false)
-  if (image && !failed) {
-    return <img src={asset(image)} alt={`${title} preview`} loading="lazy" onError={() => setFailed(true)} />
-  }
-  return (
-    <div className="project-blank" aria-hidden="true">
-      <span>{title.charAt(0)}</span>
-    </div>
-  )
-}
+const ALL = 'All'
+const categories = [ALL, ...new Set(projects.map((project) => project.category))]
+const MAX_TAGS = 4
 
-function Architecture({ architecture }) {
+function ProjectCard({ project, featured }) {
+  const { slug, title, category, tagline, image, stack } = project
+  const extra = stack.length - MAX_TAGS
   return (
-    <div className="arch">
-      <h3 className="project-label">Architecture</h3>
-      <ol className="arch-layers">
-        {architecture.layers.map((layer) => (
-          <li key={layer.name} className="arch-layer">
-            <p className="arch-name">
-              {layer.name}
-              {layer.tech && <span>{layer.tech}</span>}
-            </p>
-            <ul className="arch-nodes">
-              {layer.nodes.map((node) => <li key={node}>{node}</li>)}
-            </ul>
-          </li>
-        ))}
-      </ol>
-      {architecture.note && <p className="arch-note">{architecture.note}</p>}
-    </div>
-  )
-}
-
-function Project({ project }) {
-  const { title, summary, image, unique, stack, links, stats, architecture, decisions } = project
-  return (
-    <article className="project">
-      <h2 className="project-title">{title}</h2>
-      {summary && <p className="project-summary">{summary}</p>}
-      <div className="project-grid">
-        <div className="project-media">
-          <Media title={title} image={image} />
-        </div>
-        <div className="project-info">
-          <h3 className="project-label">What makes it different</h3>
-          <p className="project-unique">{unique}</p>
-          {(links?.live || links?.code) && (
-            <p className="project-links">
-              {links.live && <a className="button" href={links.live} target="_blank" rel="noreferrer">Open live site</a>}
-              {links.code && <a className="button button--ghost" href={links.code} target="_blank" rel="noreferrer">View code</a>}
-            </p>
-          )}
-        </div>
+    <article className={`pcard ${featured ? 'pcard--featured' : ''}`}>
+      <div className="pcard-head">
+        <h2 className="pcard-title">
+          <Link to={`/projects/${slug}`}>{title}</Link>
+        </h2>
+        <span className="pcard-category">{category}</span>
       </div>
-
-      {stats?.length > 0 && (
-        <dl className="project-stats">
-          {stats.map((stat) => (
-            <div key={stat.label}>
-              <dt>{stat.label}</dt>
-              <dd>{stat.value}</dd>
-            </div>
-          ))}
-        </dl>
-      )}
-
-      {(architecture || decisions?.length > 0) && (
-        <div className="project-deep">
-          {architecture && <Architecture architecture={architecture} />}
-          {decisions?.length > 0 && (
-            <div>
-              <h3 className="project-label">Design decisions</h3>
-              <ul className="decisions">
-                {decisions.map((item) => (
-                  <li key={item.title}>
-                    <strong>{item.title}</strong>
-                    <span>{item.detail}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          )}
-        </div>
-      )}
-
-      <h3 className="project-label">Built with</h3>
-      <ul className="tags">
-        {stack.map((tech) => <li key={tech}>{tech}</li>)}
-      </ul>
+      <div className="project-media pcard-media">
+        <ProjectMedia title={title} image={image} />
+      </div>
+      <div className="pcard-body">
+        <p className="pcard-tagline">{tagline}</p>
+        <ul className="tags pcard-tags">
+          {stack.slice(0, MAX_TAGS).map((tech) => <li key={tech}>{tech}</li>)}
+          {extra > 0 && <li className="tags-more">+{extra} more</li>}
+        </ul>
+      </div>
     </article>
   )
 }
 
 export default function Projects() {
+  const [category, setCategory] = useState(ALL)
+  const shown = category === ALL ? projects : projects.filter((project) => project.category === category)
+
   return (
     <>
-      <PageHeader title="Projects" intro="Things I've built, and what sets each one apart." />
-      <div className="container projects">
-        {projects.map((project) => <Project key={project.title} project={project} />)}
+      <PageHeader title="Projects" intro="Things I've built, and what sets each one apart. Open a project for the full story." />
+      <div className="container">
+        {categories.length > 2 && (
+          <div className="filters" role="group" aria-label="Filter projects by type">
+            {categories.map((name) => (
+              <button
+                key={name}
+                type="button"
+                className={`filter ${name === category ? 'is-active' : ''}`}
+                aria-pressed={name === category}
+                onClick={() => setCategory(name)}
+              >
+                {name}
+                <span>{name === ALL ? projects.length : projects.filter((p) => p.category === name).length}</span>
+              </button>
+            ))}
+          </div>
+        )}
+        <div className="pgrid">
+          {shown.map((project, i) => (
+            <ProjectCard key={project.slug} project={project} featured={category === ALL && i === 0} />
+          ))}
+        </div>
       </div>
     </>
   )
