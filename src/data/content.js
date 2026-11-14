@@ -62,6 +62,30 @@ export const experience = [
       code: 'https://github.com/Varshil25/cts-prototype',
     },
   },
+  {
+    role: 'Junior Software Engineer',
+    company: 'Orionik Technologies, Toronto, Canada',
+    years: 'Aug 2024 – Jun 2025',
+    points: [
+      'Cut typical API response time from around 400ms to 100ms for 500+ daily active users by redesigning REST APIs and optimizing PostgreSQL queries.',
+      'Built core modules for a multi-tenant salon and spa point-of-sale platform, including appointment scheduling, employee management and billing, with JWT auth and role-based access control.',
+      'Refactored authentication and scheduling services in Spring Boot as part of a small team, contributing to faster release cycles and fewer post-release defects.',
+      'Added Redis caching and Kafka/RabbitMQ event streaming to improve throughput under load.',
+      'Containerized services with Docker and Kubernetes and helped set up CI/CD pipelines for automated, zero-downtime deployments.',
+    ],
+    stack: ['Spring Boot', 'PostgreSQL', 'React', 'Node.js', 'Express', 'MongoDB', 'Redis', 'Kafka', 'RabbitMQ', 'Docker', 'Kubernetes', 'CI/CD'],
+  },
+  {
+    role: 'Software Engineer Intern',
+    company: 'DRC Systems, Gandhinagar, India',
+    years: 'Jan 2024 – Jul 2024',
+    points: [
+      'Built backend modules with Spring Boot and MySQL that supported over 1,000 daily API requests.',
+      'Delivered authentication, validation and reporting features across four Agile sprints.',
+      'Profiled and refactored slow queries to reduce average API response time.',
+    ],
+    stack: ['Spring Boot', 'MySQL', 'REST APIs', 'Agile'],
+  },
 ]
 
 export const research = [
