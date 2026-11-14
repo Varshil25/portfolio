@@ -18,11 +18,14 @@ export const education = [
   },
 ]
 
+// start/end are 'YYYY-MM' (end: null means ongoing) and position each role's bar on the timeline.
 export const experience = [
   {
     role: 'Application Developer Intern',
     company: 'Cencora / APR Inc.',
     years: 'Sep 2026 – Present',
+    start: '2026-09',
+    end: null,
     points: [
       'Led my team\'s move to spec-driven development (SDD), which made project delivery about 60% faster and cut bugs by nearly 80%.',
       'Designed the SDD flow so AI coding agents start with the project\'s context and goals, and test cases are written before any feature is implemented.',
@@ -36,6 +39,8 @@ export const experience = [
     role: 'Software Developer Intern',
     company: 'Cencora',
     years: 'Jun 2026 – Aug 2026',
+    start: '2026-06',
+    end: '2026-08',
     points: [
       'Optimized a cron job that took 8 hours to process 20,000 records so it finishes in 30 to 40 minutes.',
       'Worked with the DevOps team to find slow cron jobs and their query counts on a monolithic healthcare platform, then fixed the N+1 query problems behind them.',
@@ -50,6 +55,8 @@ export const experience = [
     role: 'Software Developer (Student Worker)',
     company: 'Fox School of Business, Temple University (part-time)',
     years: 'Sep 2025 – Present',
+    start: '2025-09',
+    end: null,
     points: [
       'Build a classroom and space management tool on Temple\'s website for the Fox School of Business, with 360° views of the classrooms connected to it.',
       'The linked prototype is a replica of that tool: browse buildings and rooms, filter them by campus and sort them.',
@@ -66,6 +73,8 @@ export const experience = [
     role: 'Junior Software Engineer',
     company: 'Orionik Technologies, Toronto, Canada',
     years: 'Aug 2024 – Jun 2025',
+    start: '2024-08',
+    end: '2025-06',
     points: [
       'Cut typical API response time from around 400ms to 100ms for 500+ daily active users by redesigning REST APIs and optimizing PostgreSQL queries.',
       'Built core modules for a multi-tenant salon and spa point-of-sale platform, including appointment scheduling, employee management and billing, with JWT auth and role-based access control.',
@@ -79,6 +88,8 @@ export const experience = [
     role: 'Software Engineer Intern',
     company: 'DRC Systems, Gandhinagar, India',
     years: 'Jan 2024 – Jul 2024',
+    start: '2024-01',
+    end: '2024-07',
     points: [
       'Built backend modules with Spring Boot and MySQL that supported over 1,000 daily API requests.',
       'Delivered authentication, validation and reporting features across four Agile sprints.',
