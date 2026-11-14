@@ -101,10 +101,21 @@ export const experience = [
 
 export const research = [
   {
-    title: 'Spec-driven development (SDD)',
-    venue: 'Ongoing research into how written specs, project context and test-first workflows make AI-assisted software development faster and less error-prone.',
+    title: 'Evaluating and Extending Spec-Driven Development',
+    venue: 'Independent study, MS Computer Science, Temple University. Advised by Dr. Alex Pang.',
+    summary:
+      'An empirical study of GitHub Spec Kit for software engineering and OpenOwls SD-KDP for knowledge-base production, comparing spec-driven development with unstructured prompting.',
     year: 'Ongoing',
-    link: '',
+    outcomesLabel: 'Outcomes so far, from the pilot run',
+    points: [
+      'Built sddlog, an instrument that records every prompt, tool call and edit during a run, backed by its own test suite and six integrity checks.',
+      'Ran the full Spec Kit workflow on a pilot feature: 29 minutes of active time, 5 human prompts totalling 278 words, and 58 passing tests.',
+      'Found that planning dominated the work: the phases before implementation took 74% of active time.',
+      'Measured the output: about 7,580 words of specification, roughly 27 times the human input, governing 325 lines of source code.',
+      'Observed that no spec was revised once implementation began, and that four ambiguities were settled as written assumptions instead of being raised as questions.',
+    ],
+    next: 'Next: a controlled comparison against unstructured prompting on a matched set of tasks.',
+    link: 'https://github.com/Varshil25/spec-driven-development-study',
   },
 ]
 

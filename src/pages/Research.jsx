@@ -13,10 +13,23 @@ export default function Research() {
           {research.map((item) => (
             <li key={item.title} className="row">
               <div>
-                <h3 className="row-title">
-                  {item.link ? <a href={item.link} target="_blank" rel="noreferrer">{item.title}</a> : item.title}
-                </h3>
+                <h3 className="row-title">{item.title}</h3>
                 <p className="row-sub">{item.venue}</p>
+                {item.summary && <p className="row-note">{item.summary}</p>}
+                {item.points?.length > 0 && (
+                  <>
+                    {item.outcomesLabel && <p className="row-label">{item.outcomesLabel}</p>}
+                    <ul className="timeline-points row-points">
+                      {item.points.map((point) => <li key={point}>{point}</li>)}
+                    </ul>
+                  </>
+                )}
+                {item.next && <p className="row-sub">{item.next}</p>}
+                {item.link && (
+                  <p className="project-links">
+                    <a className="button button--ghost" href={item.link} target="_blank" rel="noreferrer">View study repository</a>
+                  </p>
+                )}
               </div>
               <span className="row-meta">{item.year}</span>
             </li>
