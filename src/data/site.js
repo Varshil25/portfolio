@@ -10,7 +10,8 @@ export const site = {
   availability: '', // e.g. 'Open to full-time software engineering roles starting in 2027.'
   photo: '/images/varshil-patel.jpg',
   email: '', // TODO: add a public contact email
-  resume: '', // TODO: put resume.pdf in /public and set this to '/resume.pdf'
+  resume: '/Varshil_Patel_Resume.pdf',
+  resumePreview: '/images/resume-preview.jpg', // image of page 1, shown on the Resume page
   links: {
     github: 'https://github.com/Varshil25',
     linkedin: 'https://www.linkedin.com/in/varshil25/',

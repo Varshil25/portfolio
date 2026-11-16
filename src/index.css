@@ -542,6 +542,18 @@ code { font-size: 0.92em; padding: 0.1em 0.4em; border-radius: 6px; background: 
 
 /* ---------- Resume ---------- */
 .resume-frame { display: block; width: 100%; height: 85vh; margin-top: 2rem; border: 1px solid var(--line); border-radius: 20px; background: var(--surface); }
+.resume-actions { margin-top: 0; }
+.resume-sheet {
+  display: block;
+  max-width: 900px;
+  margin-top: 2rem;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 12px 12px 0 var(--line);
+}
+.resume-sheet img { display: block; width: 100%; height: auto; }
 .empty { max-width: 46rem; padding: 2.5rem; border: 2px dashed var(--line); border-radius: 24px; color: var(--muted); }
 .empty-title { margin-bottom: 0.5rem; font-family: var(--display); font-size: 1.6rem; font-weight: 650; color: var(--ink); }
 

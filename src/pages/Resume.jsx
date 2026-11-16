@@ -9,13 +9,22 @@ export default function Resume() {
       <div className="container">
         {site.resume ? (
           <>
-            <a className="button" href={asset(site.resume)} download>Download PDF</a>
-            <iframe className="resume-frame" src={asset(site.resume)} title="Resume" />
+            <p className="project-links resume-actions">
+              <a className="button" href={asset(site.resume)} download>Download PDF</a>
+              <a className="button button--ghost" href={asset(site.resume)} target="_blank" rel="noreferrer">Open in new tab</a>
+            </p>
+            {site.resumePreview ? (
+              <a className="resume-sheet" href={asset(site.resume)} target="_blank" rel="noreferrer">
+                <img src={asset(site.resumePreview)} alt={`Resume of ${site.fullName}. Open the PDF for a readable, selectable copy.`} />
+              </a>
+            ) : (
+              <iframe className="resume-frame" src={asset(site.resume)} title="Resume" />
+            )}
           </>
         ) : (
           <div className="empty">
-            <p className="empty-title">No resume uploaded yet</p>
-            <p>Add <code>resume.pdf</code> to the <code>public</code> folder, then set <code>resume</code> in <code>src/data/site.js</code>.</p>
+            <p className="empty-title">Resume coming soon</p>
+            <p>In the meantime, my experience and projects are on the other pages.</p>
           </div>
         )}
       </div>
