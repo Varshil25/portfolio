@@ -8,7 +8,7 @@ export const site = {
   // Draft bio written from your resume and site content. Edit freely.
   bio: 'I build full-stack products and study how AI changes the way software gets made. I\'m an application developer intern at Cencora, where I led my team\'s move to spec-driven development, and I research that same method at Temple University with Dr. Alex Pang. Before that I shipped production systems at Orionik Technologies and DRC Systems, and built Hemis-Kitchen, a food ordering platform with 600+ users.',
   availability: '', // e.g. 'Open to full-time software engineering roles starting in 2027.'
-  photo: '', // e.g. '/images/varshil.jpg' (put the file in /public/images)
+  photo: '/images/varshil-patel.jpg',
   email: '', // TODO: add a public contact email
   resume: '', // TODO: put resume.pdf in /public and set this to '/resume.pdf'
   links: {
