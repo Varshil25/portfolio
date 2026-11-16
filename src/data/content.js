@@ -1,7 +1,7 @@
 // All page content lives here. Everything below is sample text — replace it with yours.
 
-export const goal =
-  'Write two or three sentences here about what you want to build, the problems you want to work on, and where you are heading.'
+// Two or three sentences on what you are working toward. The section is hidden while this is empty.
+export const goal = ''
 
 export const education = [
   {

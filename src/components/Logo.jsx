@@ -3,9 +3,8 @@ import { site } from '../data/site.js'
 
 export default function Logo() {
   return (
-    <Link to="/" className="logo" aria-label={`${site.name}, home`}>
+    <Link to="/" className="logo" aria-label={`${site.fullName}, home`}>
       <span className="logo-mark" aria-hidden="true">{site.initials}</span>
-      <span className="logo-text">{site.name}</span>
     </Link>
   )
 }
